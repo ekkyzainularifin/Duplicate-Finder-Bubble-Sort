@@ -14,20 +14,13 @@ function CariKarakterDuplikat($string)
             }
         }
         
-        if (count($letter) === 1){ 
+        if (count($letter) >= 1){ 
             echo 'Karakter yang memiliki duplikat adalah:"' . $letter[0] . '"'; 
-        } else if (count($letter) > 1) {
-            echo 'Beberapa karakter yang memiliki duplikat adalah: ';
-            $count = count($letter);
-            foreach ($letter as $key => $value) {
-                echo '"' . $value . '"';
-                echo ($key === $count - 1) ? '.' : ', ';
-            }
         }
     } else {
         echo 'String tidak boleh kosong';
     }
 }
 
-$string  = 'AABBC';
+$string  = 'ACCBBA';
 CariKarakterDuplikat($string);
